@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerController : MonoBehaviour
+public class PlayerController : ExtendedMonoBehaviour
 {
     [SerializeField] private CharacterMovementSettings Movement;
     [SerializeField] private CharacterMouseSettings Mouse;
+    [SerializeField] private ProjectileWeapon Weapon;
 
     private Rigidbody2D rb;
     private Vector2 velocity;
@@ -27,6 +28,12 @@ public class PlayerController : MonoBehaviour
 
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         velocity = Movement.GetTargetVelocity(moveInput.normalized, isRunning);
+
+        // Handle firing weapon
+        if (Input.GetMouseButtonDown(0) && Weapon != null)
+        {
+            Weapon.Fire(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+        }
     }
 
     private void FixedUpdate()

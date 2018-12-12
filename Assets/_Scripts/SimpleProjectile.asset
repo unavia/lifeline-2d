@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62605b9bc2da7ff44a82f00bb5b23d7e, type: 3}
+  m_Name: SimpleProjectile
+  m_EditorClassIdentifier: 
+  Speed: 8
+  Lifetime: 1
+  DestroyEffect: {fileID: 3124447506433786758, guid: 51756adf66314e144b3acd10ffdc266a,
+    type: 3}
