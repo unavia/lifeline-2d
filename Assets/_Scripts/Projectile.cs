@@ -75,6 +75,13 @@ public class Projectile : ExtendedMonoBehaviour
             Instantiate(Data.DestroyEffect, transform.position, Quaternion.identity);
         }
 
+        // Play sound effect
+        if (Data.DestroySound != null)
+        {
+            AudioManager.Instance.PlayEffect(Data.DestroySound, transform.position);
+        }
+
+
         Destroy(gameObject);
     }
 }

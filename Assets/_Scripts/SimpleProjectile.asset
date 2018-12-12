@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62605b9bc2da7ff44a82f00bb5b23d7e, type: 3}
   m_Name: SimpleProjectile
   m_EditorClassIdentifier: 
-  Speed: 8
-  Lifetime: 1
+  Speed: 15
+  HasLifetime: 0
+  MaxLifetime: 0
   DestroyEffect: {fileID: 3124447506433786758, guid: 51756adf66314e144b3acd10ffdc266a,
     type: 3}
+  DestroySound: {fileID: 8300000, guid: fc63943aa48cdd94cb967abc160f7896, type: 3}
