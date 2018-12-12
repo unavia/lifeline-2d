@@ -78,7 +78,7 @@ public class Projectile : ExtendedMonoBehaviour
         // Play sound effect
         if (Data.DestroySound != null)
         {
-            AudioManager.Instance.PlayEffect(Data.DestroySound, transform.position);
+            AudioManager.Instance.PlayEffect(Data.DestroySound, transform.position, 0.75f);
         }
 
 
