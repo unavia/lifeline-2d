@@ -9,16 +9,16 @@ using UnityEngine;
 [Serializable]
 public class CharacterMovementSettings
 {
-    // General speed settings
+    [Header("Base Speed Settings")]
     public float Speed = 5f;
     public float RunMultiplier = 2.0f;
 
-    // Burst speed settings
+    [Header("Burst Settings")]
     public float BurstMultiplier = 4f;
     public float BurstLength = 2f;
     public float BurstTimeout = 10f;
 
-    // Key bindings
+    [Header("Key Bindings")]
     public KeyCode BurstKey = KeyCode.Space;
     public KeyCode RunKey = KeyCode.LeftShift;
 

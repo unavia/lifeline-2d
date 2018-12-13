@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AudioManager : GameSingleton<AudioManager>
 {
+    [Header("Volume Settings")]
     [Range(0, 1)]
     public float MasterVolume = 1;
     [Range(0, 1)]
