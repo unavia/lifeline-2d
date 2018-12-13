@@ -8,7 +8,7 @@ public class ProjectileWeapon : ExtendedMonoBehaviour
     [SerializeField] private Transform firingTransform;
     [SerializeField] private float fireCooldown = 0.5f;
 
-    [SerializeField] public bool IsInCooldown { get; private set; } = false;
+    [HideInInspector] public bool IsInCooldown { get; private set; } = false;
 
     void Start()
     {
@@ -22,6 +22,7 @@ public class ProjectileWeapon : ExtendedMonoBehaviour
     public void Fire(Vector2? targetPosition = null)
     {
         // Cannot be fired while in cooldown mode
+        // TODO: Play empty click sound?
         if (IsInCooldown) return;
         IsInCooldown = true;
 
@@ -34,6 +35,8 @@ public class ProjectileWeapon : ExtendedMonoBehaviour
             Projectile projectile = instance.GetComponent<Projectile>();
             projectile.Type = ProjectileType.TARGETED;
             projectile.TargetPosition = (Vector2) targetPosition;
+
+            AudioManager.Instance.PlayEffect(projectile.Data.LaunchSound, transform.position);
         }
 
         // Start cooldown period

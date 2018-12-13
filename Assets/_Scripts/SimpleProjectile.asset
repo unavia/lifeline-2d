@@ -18,3 +18,4 @@ MonoBehaviour:
   DestroyEffect: {fileID: 3124447506433786758, guid: 51756adf66314e144b3acd10ffdc266a,
     type: 3}
   DestroySound: {fileID: 8300000, guid: fc63943aa48cdd94cb967abc160f7896, type: 3}
+  LaunchSound: {fileID: 8300000, guid: 8772e590b616c43c1bf309407bdd92c4, type: 3}

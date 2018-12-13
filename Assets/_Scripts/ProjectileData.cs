@@ -16,4 +16,5 @@ public class ProjectileData : ScriptableObject
     [Header("Effects")]
     public GameObject DestroyEffect;
     public AudioClip DestroySound;
+    public AudioClip LaunchSound;
 }
